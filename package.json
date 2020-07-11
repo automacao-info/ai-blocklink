@@ -1,0 +1,26 @@
+{
+  "name": "@automacao.info/ai-blocklink",
+  "version": "1.0.0",
+  "description": "Webcomponent ai-blocklink following open-wc recommendations. A simple and super lightweight web component to create block links.",
+  "author": "automacao.info",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/automacao-info/ai-blocklink.git"
+  },
+  "scripts": {
+    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch"
+  },
+  "dependencies": {
+    "@github/time-elements": "^3.1.1",
+    "lit-html": "^1.1.2"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.23.0"
+  }
+}

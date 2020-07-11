@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+  <link href="./card.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    /* Using render method from lit-html */
+    import { html, render } from 'lit-html';
+    /* Using time-elements wen component from github.com */
+    import '@github/time-elements';
+    /* my component */
+    import '../index.js';
+
+    const title = 'Hello owc World!';
+    render(
+      html`
+        <ai-blocklink class="card" main-link="h2 a">
+          <section>
+            <p class="date">
+              <a href="#date">
+                <!--relative-time datetime="2020-05-10T16:30:00-08:00"></relative-time -->
+                <time-ago datetime="2020-05-10T16:30:00-08:00"></time-ago>
+              </a>
+            </p>
+            <h2><a href="#title">&ltai-blocklink&gt Demo</a></h2>
+          </section>
+          <ai-blocklink class="author-name">
+            <img src="https://via.placeholder.com/36.png/00F/888?text=JP">
+            <a href="#author">Author Name here</a>
+          </ai-blocklink>
+          <footer class="tags">
+            <a class="category" href="#category_one">Category One</a>
+            <a class="tag" href="#tag_one">Tag One</a>
+            <a class="tag" href="#tag_two">Tag Two</a>
+          </footer>
+        </ai-blocklink>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
